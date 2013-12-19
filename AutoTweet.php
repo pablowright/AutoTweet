@@ -37,7 +37,7 @@ error_log('User does not exist '.$id. "\n", 3, "AutoTweet.log");
 // Connect to DB; Execute Query:
 include 'db-conn.php';
 $link = mysqli_connect("$server","$user","$pass","$database") or die("Error " . mysqli_error($link));
-$query = "SELECT id, posts, posted FROM tweets where userID='$userID' and posted = 0 ORDER by ID DESC LIMIT 0,1" or die("Error in the consult.." . mysqli_error($link));
+$query = "SELECT id, posts, posted FROM tweets where userID='$userID' and posted = 0 ORDER by RAND() LIMIT 0,1" or die("Error in the consult.." . mysqli_error($link));
 $result = mysqli_query($link, $query);
 
 //Check results for enpty set:
