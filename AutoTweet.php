@@ -1,9 +1,10 @@
 <?php
 
-// AutoTweet.php (ver 1.02, 10-30-2013). Script to auto-post tweets from a database. Supports multiple users. Run from cron. 
+// AutoTweet.php (ver 1.02, 12-30-2014). Script to auto-post tweets from a database. Supports multiple users. Run from cron. 
 // by Paul R. Wright PRW. pablo.wright@gmail.com. Please email or tweet me if you find this useful or have 
 // suggestions/modifications.
-// Requires MySQL, php and the twitteroauth library by Abraham Williams. https://github.com/abraham/twitteroauth
+// Requires MySQL, php and the twitteroauth library by Abraham Williams. https://github.com/abraham/twitteroauth and of course,
+// Twitter app.
 
 // Use twitteroauth library:
 require_once('EDIT PATH/TO/twitteroauth.php');

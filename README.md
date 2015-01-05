@@ -4,7 +4,7 @@ AutoTweet
 PHP script to auto-post tweets from a database. Supports multiple users. Runs from cron.
 
 =========
-AutoTweet.php (ver 1.02, 10-30-2013). by Paul R. Wright: PRW.  pablo(dot)wright(at)gmail(dot)com
+AutoTweet.php (ver 1.03, 12-30-2014). by Paul R. Wright: PRW.  pablo(dot)wright(at)gmail(dot)com
 Script to auto-post tweets from a database. Supports multiple users. Run from cron. 
 Uses the Twitter API, MySQL and cron to automatically post updates to Twitter.
 
