@@ -1,6 +1,6 @@
 <?php
 
-// AutoTweet.php (ver 2.02, 02-22-2015). Script to auto-post tweets from a database. Supports multiple users. Run from cron. 
+// AutoTweet.php (ver 1.02, 10-30-2013). Script to auto-post tweets from a database. Supports multiple users. Run from cron. 
 // by Paul R. Wright PRW. pablo.wright@gmail.com Please email or tweet me if you find this useful or have 
 // suggestions/modifications.
 // Requires MySQL, php and the twitteroauth library by Abraham Williams. https://github.com/abraham/twitteroauth
@@ -92,20 +92,15 @@ $connection = new TwitterOAuth("$row[ConKey]", "$row[ConSec]", "$row[AccTok]", "
 
 }
 
-// Just in case the text is too long, trim to 140 characters:
-// $theTweet = mb_strimwidth("$tweetStr", 0, 137, "...");
-$theTweet = mb_strimwidth("$tweetStr", 0, 140);
-
-
 // Post Tweet:
-$connection->post('statuses/update', array('status' => $theTweet));
+$connection->post('statuses/update', array('status' => $tweetStr));
 
 // Free result set
 mysqli_free_result($result);
 
 // Log script results:
 $statusCode = $connection->http_code;
-$statusSuccess = "{$tweetContentDate}  TwitterUser {$userID} tweeted {$theTweet}";
+$statusSuccess = "{$tweetContentDate}  TwitterUser {$userID} tweeted {$tweetStr}";
 $statusError = "{$statusCode}  {$tweetContentDate} TwitterUser {$userID}";
 
 if ($connection->http_code == 200) {
@@ -115,6 +110,6 @@ if ($connection->http_code == 200) {
 	}
 
 echo "<br />";		
-echo "$theTweet";		
+echo "$tweetStr";		
 
 ?>
