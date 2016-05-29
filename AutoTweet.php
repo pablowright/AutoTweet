@@ -19,7 +19,7 @@ date_default_timezone_set('America/New_York');
 $tweetContentDate = date('m/d/Y h:i:s a', time());
 
 
-//Get userID from script call:
+// Get userID from script call:
 // If called from http:
 // $userID = $_GET["UID"];
 // Or better yet, get UID and check to see if it is an integer:
@@ -32,10 +32,6 @@ else {
 error_log('User does not exist '.$id. "\n", 3, "tweeterErrors.log"); 
   exit("No user by this id. Let's go listen to Science Friday.");
 }
-
-// If called from command line:
-// $userID = $argv[1];
-// we'll skip the interger check.
 
 // Connect to DB; Execute Query:
 include 'db-conn.php';
