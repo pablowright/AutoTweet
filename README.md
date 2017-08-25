@@ -49,8 +49,8 @@ INSTALLATION
                 Also note whether you will run via http or command line.
 5. Upload the db-conn.php, AutoTweet.php, OAuth.php, and twitteroauth.php to your webspace.
 6. Open a browser and navigate to AutoTweet.php to check for errors. Call script with UID arg: ex. AutoTewwt.php?UID=1
-		Go to your Twitter user page to check that the post appears in your timeline.
-7. If the script is working, create a cron job that uses cURL, wget (or command-line "/usr/bin/php")
+7. Go to your Twitter user page to check that the post appears in your timeline.
+8. If the script is working, create a cron job that uses cURL, wget (or command-line "/usr/bin/php")
  		to run AutoTweetr.php on a regular schedule.
 		
 
