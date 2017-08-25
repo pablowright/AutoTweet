@@ -57,4 +57,4 @@ INSTALLATION
 NOTES
 1. AutoTweet.php logs activity to a file located in its home directory. If your tweets are not appearing, check AutoTweet.log.
 2. For security, you might consider protecting the AutoTweet directory via .htaccess, or move the program out of your webspace and run it from the command line, e.g. "/usr/bin/php -f /path/to/AutoTweet.php 1"
-
+3. See the results:  https://twitter.com/pablowright  
